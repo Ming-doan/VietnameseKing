@@ -1,6 +1,6 @@
 const createRoom = document.querySelector('.create')
 const joinRoom = document.querySelector('.join')
-const randomRoom = document.querySelector('.ramdom')
+const randomRoom = document.querySelector('.random')
 const container = document.querySelector('.container')
 const overlay = document.querySelector('.overlay')
 const guide = document.querySelector('.container.guide-overlay')
@@ -27,5 +27,5 @@ closeBtn.addEventListener('click', function() {
 })
 
 randomRoom.addEventListener('click', function() {
-    window.location.href('https://ming-doan.github.io/VietnameseKing/assets/html/gamelauncher.html')
+    location.replace('../assets/html/gamelauncher.html')
 })
