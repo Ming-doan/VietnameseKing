@@ -1,0 +1,183 @@
+:root {
+    --main-color: #00A19D;
+    --primary-color: #FFB344;
+    --bg-color: #FFF8E5;
+    --outline-color: #E05D5D;
+}
+
+html {
+    background-color: var(--bg-color);
+    font-family: 'Nunito', sans-serif;
+    font-size: 10px;
+    overflow: hidden;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+@keyframes popUp {
+    0% {
+        transform: scale(.4);
+        opacity: 0;
+    }
+    80% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.btn {
+    padding: .4rem 3rem;
+    background-color: var(--main-color);
+    border-radius: 1rem;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    box-shadow: 0 1rem 0 0 var(--outline-color);
+    user-select: none;
+    text-align: center;
+}
+
+.btn:active {
+    transform: translateY(.4rem);
+    box-shadow: 0 .6rem 0 0 var(--outline-color);
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2rem;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.container-left,
+.container-right {
+    flex: 1;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.room-id {
+    font-size: 2.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 2rem;
+}
+
+.room-id > .btn {
+    background-color: var(--primary-color);
+}
+
+.question-input {
+    flex: 1;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-top: 2rem;
+    margin-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+}
+
+.question-input > h1 {
+    padding: 1rem;
+}
+
+.question-input-placeholder {
+    flex: 1;
+    overflow-y: scroll;
+}
+
+.question-input-btn {
+    display: flex;
+    padding: 1rem;
+}
+
+.question-input-btn > .btn:last-child {
+    margin-left: 1rem;
+    background-color: var(--outline-color);
+    box-shadow: 0 1rem 0 0 var(--main-color);
+}
+
+.question-input-btn > .btn:last-child:active {
+    transform: translateY(.4rem);
+    box-shadow: 0 .6rem 0 0 var(--main-color);
+}
+
+.container-right > h1 {
+    padding: 1rem;
+    font-size: 2.8rem;
+}
+
+.participant {
+    width: 100%;
+    flex: 1;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    overflow-y: scroll;
+    margin-bottom: 2rem;
+}
+
+.participant-item {
+    min-width: 5rem;
+    height: 4rem;
+    padding: 2rem 3rem;
+    background-color: var(--primary-color);
+    border-radius: 1rem;
+    margin: 1rem 1rem 2rem 1rem;
+    box-shadow: 0 1rem 0 0 var(--outline-color);
+    color: #fff;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation: popUp .3s ease-in-out;
+}
+
+.participant-item:hover::before {
+    position: absolute;
+    content: 'Đuổi';
+    background-color: var(--outline-color);
+    border-radius: .6rem;
+    inset: 50% auto auto 50%;
+    font-size: 1.8rem;
+    padding: .8rem 1.6rem;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+}
+
+.btn-holder {
+    display: flex;
+}
+
+.btn-holder > .btn {
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    padding: 2rem 4rem;
+    flex: 1;
+}
+
+.btn-holder > .btn:first-child {
+    margin-left: 1rem;
+    background-color: var(--outline-color);
+    box-shadow: 0 1rem 0 0 var(--main-color);
+}
+
+.btn-holder > .btn:first-child:active {
+    transform: translateY(.4rem);
+    box-shadow: 0 .6rem 0 0 var(--main-color);
+}
