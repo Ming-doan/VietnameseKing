@@ -27,5 +27,5 @@ closeBtn.addEventListener('click', function() {
 })
 
 randomRoom.addEventListener('click', function() {
-    location.replace('../assets/html/gamelauncher.html')
+    location.replace('https://ming-doan.github.io/VietnameseKing/assets/html/gamelauncher.html')
 })
