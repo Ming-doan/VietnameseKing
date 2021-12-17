@@ -26,6 +26,6 @@ closeBtn.addEventListener('click', function() {
     guide.classList.add('hidden')
 })
 
-randomRoom.addEventListener('click', function() {
-    location.replace('https://ming-doan.github.io/VietnameseKing/assets/html/gamelauncher.html')
-})
+// randomRoom.addEventListener('click', function() {
+//     location.href('../assets/html/gamelauncher.html')
+// })
